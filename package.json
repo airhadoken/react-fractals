@@ -3,21 +3,43 @@
   "version": "0.0.1",
   "private": true,
   "devDependencies": {
+    "eslint": "^3.13.1",
+    "eslint-plugin-react": "^6.9.0",
     "gh-pages": "^0.12.0",
     "react-scripts": "0.7.0"
   },
   "dependencies": {
+    "can-component": "^3.0.5",
+    "can-simple-map": "^3.1.2",
+    "can-stache": "^3.0.18",
+    "can-util": "^3.2.2",
+    "can-view-callbacks": "^3.0.3",
+    "d3-array": "^1.0.2",
+    "d3-collection": "^1.0.2",
+    "d3-color": "^1.0.2",
+    "d3-format": "^1.0.2",
+    "d3-interpolate": "^1.1.3",
     "d3-scale": "^1.0.4",
     "d3-selection": "^1.0.3",
-    "react": "^15.4.0",
-    "react-dom": "^15.4.0"
+    "d3-time": "^1.0.4",
+    "d3-time-format": "^2.0.3",
+    "http-server": "^0.9.0",
+    "steal": "^1.0.1",
+    "steal-css": "^1.2.0",
+    "steal-tools": "^1.0.3"
   },
   "homepage": "https://swizec.github.io/react-fractals",
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject",
+    "start": "http-server",
+    "build": "steal build",
+    "test": "testee App.test.js",
     "deploy": "gh-pages -d build"
+  },
+  "system": {
+    "name": "react-fractals",
+    "main": "src/index.js",
+    "plugins": [
+      "steal-css"
+    ]
   }
 }
